@@ -31,6 +31,9 @@ const ball = {
 let upPressed = false;
 let downPressed = false;
 
+const upBtn = document.getElementById("upBtn");
+const downBtn = document.getElementById("downBtn");
+
 // CONTROLES TOUCH
 upBtn.addEventListener("touchstart", (e) => {
     e.preventDefault();
