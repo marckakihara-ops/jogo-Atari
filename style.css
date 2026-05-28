@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsla(267, 4%, 59%, 0.687);
+    color: hsla(0, 0%, 100%, 0.535);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin: 20px;
+    color: #333333;
+}
+
+canvas {
+    background: lab(5.46% 0 0 / 0.886);
+    border: 3px solid white;
+}
