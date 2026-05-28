@@ -31,27 +31,30 @@ const ball = {
 let upPressed = false;
 let downPressed = false;
 
-// CONTROLES TOUCH
-upBtn.addEventListener("touchstart", (e) => {
-    e.preventDefault();
+// BOTÕES TOUCH (CELULAR)
+const upBtn = document.getElementById("upBtn");
+const downBtn = document.getElementById("downBtn");
+
+// SEGURAR botão ↑
+upBtn.addEventListener("touchstart", () => {
     upPressed = true;
 });
 
+// SOLTAR botão ↑
 upBtn.addEventListener("touchend", () => {
     upPressed = false;
 });
 
-downBtn.addEventListener("touchstart", (e) => {
-    e.preventDefault();
+// SEGURAR botão ↓
+downBtn.addEventListener("touchstart", () => {
     downPressed = true;
 });
 
+// SOLTAR botão ↓
 downBtn.addEventListener("touchend", () => {
     downPressed = false;
 });
 
-// impede bugs de toque no navegador mobile
-e.preventDefault()
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowUp") {
