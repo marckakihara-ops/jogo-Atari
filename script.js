@@ -31,29 +31,26 @@ const ball = {
 let upPressed = false;
 let downPressed = false;
 
-// BOTÕES TOUCH (CELULAR)
-const upBtn = document.getElementById("upBtn");
-const downBtn = document.getElementById("downBtn");
-
-// SEGURAR botão ↑
-upBtn.addEventListener("touchstart", () => {
+// CONTROLES TOUCH
+upBtn.addEventListener("touchstart", (e) => {
+    e.preventDefault();
     upPressed = true;
 });
 
-// SOLTAR botão ↑
 upBtn.addEventListener("touchend", () => {
     upPressed = false;
 });
 
-// SEGURAR botão ↓
-downBtn.addEventListener("touchstart", () => {
+downBtn.addEventListener("touchstart", (e) => {
+    e.preventDefault();
     downPressed = true;
 });
 
-// SOLTAR botão ↓
 downBtn.addEventListener("touchend", () => {
     downPressed = false;
 });
+
+//
 
 
 document.addEventListener("keydown", (event) => {
@@ -162,8 +159,15 @@ function moveBall() {
     }
 
     if (ball.x < 0 || ball.x > canvas.width) {
-        ball.x = canvas.width / 2;
-        ball.y = canvas.height / 2;
+
+        // Bola nasce na CPU
+        ball.x = cpu.x - 20;
+
+        // Sai do meio da raquete da CPU
+        ball.y = cpu.y + cpu.height / 2;
+
+        // Direção para o jogador
+        ball.speedX = -5;
     }
 }
 
