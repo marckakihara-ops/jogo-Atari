@@ -31,6 +31,28 @@ const ball = {
 let upPressed = false;
 let downPressed = false;
 
+// CONTROLES TOUCH
+upBtn.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    upPressed = true;
+});
+
+upBtn.addEventListener("touchend", () => {
+    upPressed = false;
+});
+
+downBtn.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    downPressed = true;
+});
+
+downBtn.addEventListener("touchend", () => {
+    downPressed = false;
+});
+
+// impede bugs de toque no navegador mobile
+e.preventDefault()
+
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowUp") {
         upPressed = true;

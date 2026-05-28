@@ -20,3 +20,23 @@ canvas {
     background: lab(5.46% 0 0 / 0.886);
     border: 3px solid white;
 }
+.controles-mobile {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.controles-mobile button {
+    width: 90px;
+    height: 90px;
+    font-size: 40px;
+    border: none;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+}
+
+.controles-mobile button:active {
+    transform: scale(0.95);
+}
