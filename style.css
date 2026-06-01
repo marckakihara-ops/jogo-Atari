@@ -21,10 +21,12 @@ canvas {
     border: 3px solid white;
 }
 .controles-mobile {
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px auto;
+   
 }
 
 .controles-mobile button {
